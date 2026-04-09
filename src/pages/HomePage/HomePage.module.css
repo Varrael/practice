@@ -1,0 +1,17 @@
+.categoriesSection {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.saleSection {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .categoriesSection,
+  .saleSection {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}

@@ -1,0 +1,21 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--muted);
+}
+
+.item:not(:last-child)::after {
+  content: '/';
+}
+
+.item:last-child {
+  color: var(--text);
+}

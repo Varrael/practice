@@ -1,0 +1,114 @@
+.banner {
+  padding: 32px 32px 0;
+  border-radius: var(--radius-big);
+  background: linear-gradient(248deg, #0b710b 32.64%, #339933 98.96%);
+}
+
+.banner h2 {
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 748px 516px;
+  gap: 32px;
+  align-items: center;
+}
+
+.image {
+  width: 748px;
+  height: 360px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.input {
+  min-height: 58px;
+  padding: 16px 32px;
+  border: 1px solid #fff;
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.button {
+  min-height: 58px;
+  padding: 16px 32px;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.submitted {
+  background: #f1f3f4;
+  color: #8b8b8b;
+  border-color: #d9d9d9;
+}
+
+.messages {
+  min-height: 20px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.message {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+@media (max-width: 1100px) {
+  .banner {
+    padding-bottom: 32px;
+  }
+
+  .banner h2 {
+    font-size: 48px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 24px 24px 0;
+  }
+
+  .banner h2 {
+    font-size: 38px;
+  }
+
+  .input,
+  .button {
+    font-size: 16px;
+  }
+}

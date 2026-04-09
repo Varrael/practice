@@ -1,0 +1,101 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-big);
+  overflow: hidden;
+}
+
+.imageBox {
+  position: relative;
+  height: 284px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 8px;
+  border-radius: var(--radius-small);
+  background: var(--accent);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.action {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  min-height: 58px;
+  padding: 16px 32px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover .action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info {
+  padding: 0 32px 32px;
+}
+
+.info h3 {
+  margin: 0 0 16px;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prices {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.actualPrice {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.oldPrice {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  .action {
+    opacity: 1;
+    transform: none;
+  }
+
+  .info {
+    padding: 0 20px 20px;
+  }
+}

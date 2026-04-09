@@ -1,0 +1,53 @@
+.checkboxLabel {
+  position: relative;
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  width: 8px;
+  height: 15px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.input:checked + .box {
+  border-color: #339933;
+  background: #339933;
+}
+
+.input:checked + .box::after {
+  opacity: 1;
+}
+
+.input:focus-visible + .box {
+  outline: 2px solid rgba(51, 153, 51, 0.35);
+  outline-offset: 2px;
+}
